@@ -95,19 +95,21 @@
     <div class="gallery-area section-padding30">
         <style>
             .gallery-img {
-                background-size: contain; /* Ensures the entire image is visible */
-                background-repeat: no-repeat; /* Prevents the image from repeating */
-                background-position: center; /* Centers the image within its container */
-                width: 100%; /* Ensures the image container spans full width */
+                width: 100%; /* Make the image span the full width of its container */
                 height: 300px; /* Adjust the height as needed */
+                object-fit: contain; /* Ensures the entire image is visible */
+                object-position: center; /* Centers the image inside the container */
+            }
+            .box {
+                overflow: hidden; /* Ensures images don’t spill out of their container */
             }
         </style>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/1.webp);"></div>
-                        <div class="overlay" style="top: -1e+07px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/1.png" alt="Muscle gaining">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Muscle gaining</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
@@ -117,8 +119,8 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/2.png);"></div>
-                        <div class="overlay" style="top: 500px; left: 0px; width: 1081px; height: 500px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/2.png" alt="Transform">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Transform</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
@@ -128,8 +130,8 @@
                 </div>
                 <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/3.png);"></div>
-                        <div class="overlay" style="top: -1e+07px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/3.png" alt="Transform">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Transform</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
@@ -139,8 +141,8 @@
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/4.jpg);"></div>
-                        <div class="overlay" style="top: 0px; left: 803px; width: 803px; height: 500px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/4.jpg" alt="Weight Loss">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Weight Loss</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
@@ -150,8 +152,8 @@
                 </div>
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/6.webp);"></div>
-                        <div class="overlay" style="top: 500px; left: 0px; width: 803px; height: 500px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/6.png" alt="Muscle gaining">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Muscle gaining</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
@@ -159,10 +161,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(assets/img/gallery/8.jpg);"></div>
-                        <div class="overlay" style="top: -1e+07px;">
+                        <img class="gallery-img big-img" src="assets/img/gallery/8.jpg" alt="Transform">
+                        <div class="overlay">
                             <div class="overlay-content">
                                 <h3>Transform</h3>
                                 <a href="gallery.html"><i class="ti-plus"></i></a>
