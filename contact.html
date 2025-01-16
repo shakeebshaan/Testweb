@@ -199,7 +199,7 @@
                                                     <li></li>
                                                     <li><a href="index.html">Pricing</a></li>
                                                     <li><a href="gallery.html">Gallery</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="contact.html">Register Now</a></li>
                                                 </ul>
                                             </nav>
                                         </div>   
@@ -250,30 +250,27 @@
     }
 </script>
 <script>
-    // Web App URL
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx6-nE-z3DkQuyU9bE01snGE1FyRfSYc976PLEuIxpSQ4umAYmzRWp1k3yv8YIgStSy3g/exec';
-
-    // Handle form submission
-    document.getElementById('submitForm').addEventListener('click', () => {
-        const name = document.getElementById('name').value;
-        const code = document.getElementById('code').value || '';
-        const mobile = document.getElementById('number').value;
-
-        const data = { name, code, Mobile: mobile };
-
-        fetch(scriptURL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
-        })
-            .then((response) => response.json())
-            .then((result) => {
-                alert('Registration Successful!');
-            })
-            .catch((error) => {
-                console.error('Error!', error.message);
-            });
+   fetch('https://script.google.com/macros/s/AKfycbx6-nE-z3DkQuyU9bE01snGE1FyRfSYc976PLEuIxpSQ4umAYmzRWp1k3yv8YIgStSy3g/exec', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        name: document.getElementById('name').value,
+        code: document.getElementById('code').value,
+        Mobile: document.getElementById('number').value,
+    }),
+})
+    .then((response) => response.json())
+    .then((result) => {
+        console.log('Success:', result);
+        alert('Registration successful!');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('Error during registration!');
     });
+
 </script>
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
