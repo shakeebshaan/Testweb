@@ -116,6 +116,9 @@
                             <button type="button" id="submitForm" class="button button-contactForm boxed-btn">Register</button>
                         </div>
                     </form>
+                    
+                  
+                    
                 </div>
                 <div class="col-lg-3 offset-lg-1">
                  
@@ -250,26 +253,25 @@
     }
 </script>
 <script>
-   fetch('https://script.google.com/macros/s/AKfycbx6-nE-z3DkQuyU9bE01snGE1FyRfSYc976PLEuIxpSQ4umAYmzRWp1k3yv8YIgStSy3g/exec', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        name: document.getElementById('name').value,
-        code: document.getElementById('code').value,
-        Mobile: document.getElementById('number').value,
-    }),
-})
-    .then((response) => response.json())
-    .then((result) => {
-        console.log('Success:', result);
-        alert('Registration successful!');
+document.getElementById('submitForm').addEventListener('click', function() {
+    const form = document.getElementById('contactForm');
+    const formData = new FormData(form);
+
+    fetch('https://script.google.com/macros/s/AKfycbwnl7sDiYOW4Xc3XEXNv18qMTh0Ljw54FKPOyJCIVSi2RryNz-Kj0lZH_s52sRcjzFdAw/exec', {
+        method: 'POST',
+        body: formData
     })
-    .catch((error) => {
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Handle success (e.g., display a confirmation message)
+    })
+    .catch(error => {
         console.error('Error:', error);
-        alert('Error during registration!');
+        // Handle error
     });
+});
+
 
 </script>
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
